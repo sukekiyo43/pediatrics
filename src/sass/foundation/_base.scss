@@ -5,6 +5,7 @@ $breakpointInner: $innerWidth + strip-unit($padding-pc) * 2;
 
 // ルートフォント設定
 html {
+
   // ~ 375px
   @media (max-width: 375px) {
     font-size: vw(375, 16);
@@ -19,7 +20,7 @@ html {
   }
 
   // インナー幅＋余白 ~
-  @media ( min-width: $breakpointInner ) {
+  @media (min-width: $breakpointInner ) {
     font-size: 100%;
   }
 }
@@ -27,7 +28,7 @@ html {
 // フォント、カラー設定
 body {
   font-family: $font-main;
-  color: $black;
+  color: $text;
 }
 
 // ホバー
@@ -35,6 +36,7 @@ a,
 button {
   @include mq(md) {
     transition: .3s;
+
     &:hover {
       opacity: 0.7;
       cursor: pointer;
