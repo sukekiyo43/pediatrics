@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <!-- meta情報 -->
-  <title>タイトル</title>
-  <meta name="description" content="" />
+  <title>cocomate</title>
+  <meta name="description"
+    content="地域に根ざした小児医療を提供するクリニックです。一般小児科から専門外来まで、子どもたちの健やかな成長をサポートします。経験豊富な医師とスタッフが、親切丁寧に診療いたします。" />
   <meta name="keywords" content="" />
   <!-- ogp -->
   <meta property="og:title" content="" />
@@ -15,17 +17,86 @@
   <meta property="og:image" content="" />
   <meta property="og:site_name" content="" />
   <meta property="og:description" content="" />
+  <!-- GoogleFonts Zen Maru Gothic-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
   <!-- ファビコン -->
-  <link rel="icon" href="" />
+  <link rel="icon" href="../images/icon.png" />
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
+
 <body>
-  <div class="l-inner">
-    <p class="p-test">cocomateだよ\(^o^)/</p>
-  </div>
+  <header class="p-header l-header">
+    <div class="p-header__inner l-inner">
+      <h1 class="p-header__logo">
+        <a href="">
+          <img src="../images/logo.png" alt="ヘッダーロゴ">
+        </a>
+      </h1>
+      <nav class="p-header__nav p-header-menu">
+        <ul class="p-header-menu__items">
+          <li class="p-header-menu__item"><a href="">診療時間・アクセス</a></li>
+          <li class="p-header-menu__item"><a href="">診療案内</a></li>
+          <li class="p-header-menu__item"><a href="">スタッフ紹介</a></li>
+          <li class="p-header-menu__item"><a href="">クリニック紹介</a></li>
+          <li class="p-header-menu__item"><a href="">お問い合わせ</a></li>
+          <li class="p-header-menu__button">
+            <a class="c-btn c-btn--pink" href="">診察予約</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="p-mv l-mv">
+      <div class="p-mv__inner">
+        <div class="p-mv__body">
+          <div class="p-mv__left-box"></div>
+          <div class="p-mv__title-box">
+            <p class="p-mv__title" data-title="The clinic with the most smiles of children">
+              健やかな笑顔があふれる<br>
+              小児クリニック
+            </p>
+          </div>
+          <div class="p-mv__copyright">
+            <div class="p-mv__copyright-img"></div>
+          </div>
+        </div>
+
+        <div class="p-mv__news p-news">
+          <h2 class="c-section-title" data-ruby="news">お知らせ</h2>
+          <ul class="p-news__items">
+            <li class="p-news__item">
+              <a href="">
+                <time class="p-news__date" datetime="2023-05-20">2023.05.20</time>
+                <p class="p-news__text">発熱外来受診時のお願い</p>
+              </a>
+            </li>
+            <li class="p-news__item">
+              <a href="">
+                <time class="p-news__date" datetime="2023-05-13">2023.05.13</time>
+                <p class="p-news__text">5/31(水) 午後臨時休診のお知らせ</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-service">
+      <h2 class="c-section-title-second" data-ruby="Our Services">
+        診療のご案内
+      </h2>
+      <div class="p-cards"></div>
+    </section>
+  </main>
+
 </body>
+
 </html>
