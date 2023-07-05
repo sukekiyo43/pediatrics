@@ -24,17 +24,17 @@
     align-items: center;
     width: 83.3%;
     background-image: url(../images/mv.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
-    border-radius: 121px 0px 0px 0px;
+    border-radius: rem(121) 0px 0px 0px;
 }
 
 .p-mv__title {
     font-size: rem(32);
     font-weight: 400;
-    line-height: calc(52 / 32);
+    line-height: calc(51/32);
     margin-left: 18.65%;
-    margin-top: -1px;
-    letter-spacing: 1.3px;
+    letter-spacing: .04em;
 }
 
 .p-mv__title::after {
@@ -42,9 +42,9 @@
     display: block;
     font-weight: 400;
     font-size: rem(16);
-    line-height: calc(23 / 16);
-    margin-top: rem(15);
-    letter-spacing: .01px;
+    line-height: calc(23/16);
+    margin-top: rem(16);
+    letter-spacing: 0;
 }
 
 .p-mv__copyright {

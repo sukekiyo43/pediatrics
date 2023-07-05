@@ -3,14 +3,23 @@
 .p-header-menu__items {
     display: flex;
     align-items: center;
-    gap: rem(32);
+    min-height: rem(103);
+    height: 100%;
 }
 
 .p-header-menu__item {
     font-weight: 400;
-    letter-spacing: .53px;
     font-size: rem(15);
-    line-height: calc(25 / 15);
+    line-height: calc(25/15);
+    height: 100%;
+}
+
+.p-header-menu__item a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    letter-spacing: .04em;
+    padding: rem(24) rem(16);
 }
 
 .p-header-menu__button {
@@ -18,7 +27,7 @@
     width: rem(170);
     font-size: rem(16);
     letter-spacing: .53px;
-
+    margin-left: rem(15);
 }
 
 .p-header-menu__button::after {

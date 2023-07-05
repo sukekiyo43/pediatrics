@@ -4,16 +4,15 @@
     display: flex;
     align-items: center;
     background-color: $white;
-    border-radius: 8px, 0px, 0px, 8px;
-    box-shadow: 0 10px 20px 0 rgba(210, 233, 145, 0.1);
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 rem(10) rem(20) 0 rgba(210, 233, 145, 0.1);
 }
 
 .p-news__items {
     display: flex;
     flex-direction: column;
     gap: rem(24);
-    // margin-left: rem(155);
-    margin-left: 155px;
+    margin-left: rem(155);
 }
 
 .p-news__item a {
@@ -24,14 +23,16 @@
 .p-news__date {
     font-weight: 500;
     font-size: rem(16);
-    line-height: calc(23 / 16);
+    line-height: calc(23/16);
     color: $logo_green;
-    letter-spacing: 1.6px;
+    letter-spacing: .1em;
+    max-width: rem(85);
 }
 
 .p-news__text {
     font-weight: 400;
     font-size: rem(16);
-    line-height: calc(23 / 16);
-    letter-spacing: 1.6px;
+    line-height: calc(23/16);
+    letter-spacing: .1em;
+    word-break: break-word;
 }

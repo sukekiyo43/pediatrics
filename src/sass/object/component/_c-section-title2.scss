@@ -1,0 +1,32 @@
+@use 'global' as *;
+
+.c-section-title2 {
+    font-weight: 500;
+    font-size: rem(28);
+    line-height: calc(41 / 28);
+    white-space: nowrap;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.c-section-title2::before {
+    content: '';
+    display: block;
+    width: rem(36);
+    height: rem(36);
+    background-image: url(../images/icon.png);
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: rem(33);
+}
+
+.c-section-title2::after {
+    content: attr(data-ruby);
+    display: block;
+    font-weight: 500;
+    font-size: rem(12);
+    line-height: calc(12 / 17);
+    margin-top: rem(16);
+}

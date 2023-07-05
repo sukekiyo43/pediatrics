@@ -1,0 +1,15 @@
+@use 'global' as *;
+
+.p-cards {}
+
+.p-cards__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: rem(116) rem(40);
+}
+
+.p-cards__item {
+    max-width: rem(400);
+    min-height: rem(500);
+}

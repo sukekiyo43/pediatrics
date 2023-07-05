@@ -7,12 +7,10 @@
 .p-header__inner {
     display: flex;
     justify-content: space-between;
-    padding-top: rem(24);
-    padding-bottom: rem(24);
 }
 
 .p-header__logo {
     width: rem(157);
     height: rem(52);
-    padding-top: 1px;
+    margin-top: rem(25);
 }

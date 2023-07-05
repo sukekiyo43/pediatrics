@@ -1,0 +1,14 @@
+@use 'global' as *;
+
+.p-service {
+    background: $bg_yellow_green;
+}
+
+.p-service__inner {
+    padding-top: rem(212);
+}
+
+.p-service__title {
+    text-align: center;
+    margin-bottom: rem(60);
+}
