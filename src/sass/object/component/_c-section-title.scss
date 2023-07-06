@@ -7,6 +7,10 @@
     white-space: nowrap;
 }
 
+.c-section-title--news {
+    text-transform: uppercase;
+}
+
 .c-section-title::after {
     content: attr(data-ruby);
     display: block;
@@ -14,5 +18,4 @@
     font-size: rem(12);
     line-height: calc(17/12);
     margin-top: rem(12);
-    text-transform: uppercase;
 }

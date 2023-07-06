@@ -7,8 +7,8 @@
     color: $white;
     border-radius: rem(50);
     font-weight: 500;
-    letter-spacing: .04em;
     text-align: center;
+    font-family: $font-main;
 }
 
 .c-btn.c-btn--pink {
@@ -16,4 +16,5 @@
     max-width: rem(170);
     min-height: rem(55);
     padding: rem(16) rem(36) rem(16) rem(23);
+    letter-spacing: .04em;
 }
