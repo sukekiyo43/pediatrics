@@ -6,7 +6,7 @@
 }
 
 .p-parients__inner {
-    padding: rem(120) rem(200);
+    padding: rem(121) rem(200) rem(118);
     display: flex;
     justify-content: space-between;
     min-height: rem(520);
@@ -16,27 +16,35 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex-shrink: 0;
+    max-width: rem(250);
 }
 
 .p-parients__staff {
+    position: relative;
     display: inline-block;
     font-size: rem(14);
     line-height: calc(23/14);
     letter-spacing: .04em;
+    padding-right: rem(80);
+    margin-top: rem(20);
 }
 
 .p-parients__staff::after {
+    position: absolute;
     display: inline-block;
     content: '';
     width: rem(48);
     height: 1px;
     background-color: $text;
+    top: 43%;
+    right: rem(29);
     margin-left: rem(16);
-    margin-bottom: rem(6);
 }
 
 .p-parients__text {
     font-size: rem(16);
     font-weight: 400;
     line-height: calc(45/16);
+    max-width: rem(576);
 }
