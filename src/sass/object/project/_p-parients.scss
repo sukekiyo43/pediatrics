@@ -6,7 +6,7 @@
 }
 
 .p-parients__inner {
-    padding: rem(121) rem(200) rem(118);
+    padding: rem(121) rem(200) rem(119);
     display: flex;
     justify-content: space-between;
     min-height: rem(520);
@@ -40,6 +40,12 @@
     top: 43%;
     right: rem(29);
     margin-left: rem(16);
+    transition: .3s !important;
+}
+
+.p-parients__staff:hover::after {
+    right: rem(17);
+    opacity: .7;
 }
 
 .p-parients__text {

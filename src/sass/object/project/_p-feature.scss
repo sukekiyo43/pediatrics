@@ -31,7 +31,7 @@
     position: relative;
     background-color: $white;
     border-radius: rem(16);
-    box-shadow: 0 rem(10) rem(20) 0 rgba(210, 233, 145, 0.102);
+    box-shadow: 0 rem(10) rem(20) 0 rgba(210, 233, 145, 0.1);
     min-height: rem(269);
     max-width: rem(509);
     padding: rem(57) rem(56) rem(56);
@@ -94,10 +94,15 @@
 .p-feature__btn::after {
     position: absolute;
     content: "";
-    width: 7px;
-    height: 13px;
+    width: rem(7);
+    height: rem(13);
     top: 50%;
     transform: translateY(-50%);
-    right: 28px;
+    right: rem(28);
     background: url(../images/btn-arrow.svg) no-repeat center center/cover;
+    transition: .3s !important;
+}
+
+.p-feature__btn:hover::after {
+    right: rem(16);
 }

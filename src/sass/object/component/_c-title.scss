@@ -1,12 +1,12 @@
 @use 'global' as *;
 
-.c-section-title {
+.c-title {
     font-weight: 500;
     font-size: rem(28);
     line-height: calc(40/28);
 }
 
-.c-section-title::after {
+.c-title::after {
     content: attr(data-ruby);
     display: block;
     font-weight: 500;

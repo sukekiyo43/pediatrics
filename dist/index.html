@@ -40,11 +40,11 @@
       </h1>
       <nav class="p-header__nav p-header-menu">
         <ul class="p-header-menu__items">
-          <li class="p-header-menu__item"><a href="">診療時間・アクセス</a></li>
-          <li class="p-header-menu__item"><a href="">診療案内</a></li>
-          <li class="p-header-menu__item"><a href="">スタッフ紹介</a></li>
-          <li class="p-header-menu__item"><a href="">クリニック紹介</a></li>
-          <li class="p-header-menu__item"><a href="">お問い合わせ</a></li>
+          <li class="p-header-menu__item"><a href=""><span>診療時間・アクセス</span></a></li>
+          <li class="p-header-menu__item"><a href=""><span>診療案内</span></a></li>
+          <li class="p-header-menu__item"><a href=""><span>スタッフ紹介</span></a></li>
+          <li class="p-header-menu__item"><a href=""><span>クリニック紹介</span></a></li>
+          <li class="p-header-menu__item"><a href=""><span>お問い合わせ</span></a></li>
           <li class="p-header-menu__button">
             <a class="c-btn c-btn--pink" href="">
               診察予約
@@ -66,13 +66,12 @@
               小児クリニック
             </p>
           </div>
-          <div class="p-mv__copyright">
-            <div class="p-mv__copyright-img"></div>
+          <div class="p-mv__copyright-box">
+            <small class="p-mv__copyright">&copy; cocomate All Rights Reserved.</small>
           </div>
         </div>
-
         <div class="p-mv__news p-news">
-          <h2 class="c-section-title p-news__title" data-ruby="news">お知らせ</h2>
+          <h2 class="c-title p-news__title" data-ruby="news">お知らせ</h2>
           <ul class="p-news__items">
             <li class="p-news__item">
               <a href="">
@@ -94,7 +93,7 @@
     <section class="p-service">
       <div class="p-service__inner l-inner">
         <div class="p-service__title">
-          <h2 class="c-section-title2" data-ruby="Our Services">診療のご案内</h2>
+          <h2 class="c-title2" data-ruby="Our Services">診療のご案内</h2>
         </div>
         <div class="p-cards">
           <div class="p-cards__inner">
@@ -202,7 +201,7 @@
     <section class="p-parients l-parients">
       <div class="p-parients__inner">
         <div class="p-parients__title">
-          <h2 class="c-section-title" data-ruby="For Parients">ご来院される方へ</h2>
+          <h2 class="c-title" data-ruby="For Parients">ご来院される方へ</h2>
           <a class="p-parients__staff" href="#">スタッフ紹介を見る</a>
         </div>
         <p class="p-parients__text">
@@ -218,7 +217,7 @@
     <section class="p-feature l-feature">
       <div class="l-inner p-feature__inner">
         <div class="p-feature__title">
-          <h2 class="c-section-title2" data-ruby="Feature">
+          <h2 class="c-title2" data-ruby="Feature">
             当クリニックの特徴
           </h2>
         </div>
@@ -253,6 +252,80 @@
         <a class="c-btn p-feature__btn" href="">
           クリニックについて詳しく見る
         </a>
+      </div>
+    </section>
+
+    <section class="p-info">
+      <div class="l-info">
+        <div class="p-info__head">
+          <div class="p-info__head-inner">
+            <div class="p-info__logo">
+              <img src="../images/logo.png" alt="infoのロゴ画像">
+            </div>
+            <p class="p-info__tel">
+              <span>Tel.</span>03-4579-9011
+            </p>
+            <p class="p-info__address">
+              〒151-0000 東京都新宿区代々木1-1-1 SHIBUYAビル3F
+            </p>
+          </div>
+          <div class="p-info__hours">
+            <table class="p-table p-info__table">
+              <tbody class="p-table__body">
+                <tr>
+                  <td class="p-table__text" colspan="2">受付時間</td>
+                  <td class="p-table__text">月</td>
+                  <td class="p-table__text">火</td>
+                  <td class="p-table__text">水</td>
+                  <td class="p-table__text">木</td>
+                  <td class="p-table__text">金</td>
+                  <td class="p-table__text">土</td>
+                  <td class="p-table__text">日/祝</td>
+                </tr>
+                <tr>
+                  <td class="p-table__text" colspan="2">09:00~13:00</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                </tr>
+                <tr>
+                  <td class="p-table__text" colspan="2">15:00~18:00</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                </tr>
+                <tr>
+                  <td class="p-table__reception-time" colspan="8">
+                    午前最終受付：12:30 午後最終受付：17:30
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="p-info__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12964.464313134007!2d139.6853711!3d35.6741437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ccbdae96a6b%3A0xcddcf2def16786fa!2z44CSMTUxLTAwNTMg5p2x5Lqs6YO95riL6LC35Yy65Luj44CF5pyo!5e0!3m2!1sja!2sjp!4v1688658323311!5m2!1sja!2sjp"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="p-info__contact-box">
+          <a class="p-info__button c-btn-info p-info__button--green" href="">
+            <h2 class="c-title" data-ruby="Contact">
+              お問い合わせ</h2>
+          </a>
+          <a class="p-info__button c-btn-info p-info__button--pink" href="">
+            <h2 class="c-title" data-ruby="Reserve">診察予約</h2>
+          </a>
+        </div>
       </div>
     </section>
   </main>

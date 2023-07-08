@@ -60,4 +60,9 @@
     transform: translateY(-50%);
     right: 1.5rem;
     background: url(../images/btn-arrow.svg) no-repeat center center/cover;
+    transition: .3s !important;
+}
+
+.c-card__btn:hover::after {
+    right: rem(12);
 }

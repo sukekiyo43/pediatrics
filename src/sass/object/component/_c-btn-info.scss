@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.c-btn-info {
+    color: $white;
+    display: grid;
+    align-items: center;
+    border-radius: rem(16);
+}

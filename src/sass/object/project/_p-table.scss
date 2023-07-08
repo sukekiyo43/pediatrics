@@ -1,0 +1,45 @@
+@use 'global' as *;
+
+.p-table {
+    border-collapse: collapse;
+}
+
+.p-table td {
+    text-align: center;
+    vertical-align: middle;
+    height: rem(42);
+    letter-spacing: .04em;
+    width: rem(40);
+    font-size: rem(16);
+    font-weight: 400;
+    line-height: calc(23/16);
+}
+
+.p-table tr+tr {
+    border-top: solid 1px $line_grey;
+}
+
+.p-table__text:first-child {
+    width: rem(107);
+}
+
+.p-table__text:last-child {
+    width: rem(55);
+}
+
+.p-table .p-table__shape {
+    font-weight: 500;
+    color: $btn_pink;
+}
+
+.p-table .p-table__shape--black {
+    color: $text;
+}
+
+.p-table .p-table__reception-time {
+    font-size: rem(10);
+    line-height: calc(15/10);
+    text-align: left;
+    height: rem(28);
+    padding-left: rem(3);
+}
