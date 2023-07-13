@@ -1,6 +1,6 @@
 
 jQuery(function ($) {
-  
+
   // ページトップボタン
   var topBtn = $('.js-pagetop');
   topBtn.hide();
@@ -34,5 +34,25 @@ jQuery(function ($) {
     $('html,body').animate({ scrollTop: targetY }, time, 'swing');
     return false;
   });
+
+
+  //スクロール時、ヘッダーに影を付けるクラスの操作
+  function handleScroll() {
+    if ($(window).scrollTop() > 0) {
+      $('.js-header').addClass('active');
+    } else {
+      $('.js-header').removeClass('active');
+    }
+  }
+
+  $(window).on('scroll', handleScroll);
+  $(document).ready(handleScroll);
+
+  // ハンバーガーメニュー開閉
+  $('.js-hamburger').on('click', function () {
+    $(this).toggleClass('open');
+  });
+
+
 
 });

@@ -9,49 +9,77 @@
 .p-mv__body {
     display: flex;
     align-items: stretch;
-    height: rem(600);
+    height: rem(400);
+
+    @include mq(md) {
+        height: rem(600);
+    }
 }
 
 .p-mv__left-box {
-    width: 8.35%;
-    background: linear-gradient(to bottom, #fff 0%, #fff 61.8%, #fafdf2 61.8%, #fafdf2 100%);
-    flex: 1;
-    margin-left: calc(50% - 50vw);
+    display: none;
+
+    @include mq(md) {
+        display: block;
+        width: 8.35%;
+        background: linear-gradient(to bottom, #fff 0%, #fff 61.8%, #fafdf2 61.8%, #fafdf2 100%);
+        flex: 1;
+        margin-left: calc(50% - 50vw);
+    }
 }
 
 .p-mv__title-box {
+    width: 100%;
     display: flex;
     align-items: center;
-    width: 83.3%;
     background-image: url(../images/mv.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: rem(121) 0px 0px 0px;
+
+    @include mq(md) {
+        width: 83.3%;
+    }
 }
 
 .p-mv__title {
-    font-size: rem(32);
+    font-size: clamp(1.125rem, 0.7663rem + 1.5306vw, 1.5rem);
+    margin-left: clamp(1.25rem, -5.3268rem + 28.0612vw, 8.125rem);
     font-weight: 400;
     line-height: calc(51/32);
-    margin-left: 18.65%;
     letter-spacing: .04em;
+
+    @include mq(md) {
+        margin-left: 18.65%;
+        font-size: rem(32);
+    }
 }
 
 .p-mv__title::after {
     content: attr(data-title);
     display: block;
     font-weight: 400;
-    font-size: rem(16);
     line-height: calc(23/16);
-    margin-top: rem(16);
     letter-spacing: 0;
+    font-size: clamp(0.6875rem, 0.3886rem + 1.2755vw, 1rem);
+    margin-top: 3px;
+
+    @include mq(md) {
+        margin-top: rem(16);
+        font-size: rem(16);
+    }
 }
 
 .p-mv__copyright-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 8.35%;
+    display: none;
+
+    @include mq(md) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 8.35%;
+    }
 }
 
 .p-mv__copyright {
@@ -65,12 +93,28 @@
 }
 
 .p-mv__news {
-    position: absolute;
-    z-index: 10;
-    right: calc(8.35% - 0.8px);
-    padding: rem(20) rem(72);
-    margin-top: rem(-90);
-    width: 100%;
-    min-height: rem(182);
-    max-width: rem(906);
+    padding: rem(30) rem(20);
+    margin: 0 auto;
+
+    @include mq(md) {
+        position: absolute;
+        z-index: 10;
+        right: calc(8.35% - 0.8px);
+        padding: rem(20) rem(72);
+        margin-top: rem(-90);
+        width: 100%;
+        min-height: rem(182);
+        max-width: rem(906);
+    }
+
+    .p-mv__news-inner {
+        display: flex;
+        max-width: rem(600);
+        justify-content: left;
+        margin: 0 auto;
+
+        @include mq(md) {
+            max-width: initial;
+        }
+    }
 }

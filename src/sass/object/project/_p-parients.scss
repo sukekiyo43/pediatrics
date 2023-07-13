@@ -6,7 +6,9 @@
 }
 
 .p-parients__inner {
-    padding: rem(121) rem(200) rem(119);
+    padding: rem(121) 0 rem(119);
+    max-width: rem(1040);
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     min-height: rem(520);
@@ -52,5 +54,5 @@
     font-size: rem(16);
     font-weight: 400;
     line-height: calc(45/16);
-    max-width: rem(576);
+    max-width: rem(625);
 }

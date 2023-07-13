@@ -1,9 +1,13 @@
 @use 'global' as *;
 
 .c-title {
+    font-size: 22px;
     font-weight: 500;
-    font-size: rem(28);
     line-height: calc(40/28);
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
 }
 
 .c-title::after {

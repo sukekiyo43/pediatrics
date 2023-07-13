@@ -1,32 +1,31 @@
 @use 'global' as *;
 
-.p-header-menu__items {
+.p-menu__items {
     display: flex;
     align-items: center;
-    min-height: rem(103);
     height: 100%;
 }
 
-.p-header-menu__item {
+.p-menu__item {
     font-weight: 400;
     font-size: rem(15);
     line-height: calc(25/15);
     height: 100%;
+    letter-spacing: .0375em;
 }
 
-.p-header-menu__item a {
+.p-menu__item-core {
     display: flex;
     align-items: center;
     height: 100%;
-    letter-spacing: .04em;
-    padding: rem(24) rem(16);
+    padding: rem(15) rem(16);
 }
 
-.p-header-menu__item span {
+.p-menu__item span {
     position: relative;
 }
 
-.p-header-menu__item span::after {
+.p-menu__item span::after {
     @include mq(md) {
         position: absolute;
         bottom: rem(10);
@@ -41,16 +40,16 @@
     }
 }
 
-.p-header-menu__item a:hover {
+.p-menu__item a:hover {
     opacity: 1 !important;
 }
 
-.p-header-menu__item:hover span::after {
+.p-menu__item:hover span::after {
     opacity: 0;
     animation: border .8s ease-out forwards !important;
 }
 
-.p-header-menu__item:hover span::after {
+.p-menu__item:hover span::after {
     bottom: rem(-10);
     visibility: visible;
 }
@@ -67,31 +66,7 @@
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.p-header-menu__button {
+.p-menu__button {
     position: relative;
     width: rem(170);
     font-size: rem(16);
@@ -99,7 +74,7 @@
     margin-left: rem(15);
 }
 
-.p-header-menu__button::after {
+.p-menu__button::after {
     position: absolute;
     content: '';
     width: rem(6);
@@ -111,6 +86,6 @@
     transition: .3s !important;
 }
 
-.p-header-menu__button:hover::after {
+.p-menu__button:hover::after {
     right: rem(12);
 }

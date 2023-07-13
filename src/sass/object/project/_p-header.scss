@@ -4,13 +4,72 @@
     background-color: $white;
 }
 
+.p-header.active {
+    box-shadow: 0px 10px 20px 0px rgba(142, 207, 196, 0.1);
+}
+
 .p-header__inner {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: rem(80);
+
+    @include mq(md) {
+        min-height: rem(103);
+        padding: rem(20) rem(25);
+    }
 }
 
 .p-header__logo {
-    width: rem(157);
-    height: rem(52);
-    margin-top: rem(25);
+    width: rem(130);
+    height: rem(43);
+    margin-bottom: 2px;
+
+    @include mq(md) {
+        width: rem(157);
+        height: rem(52);
+    }
+}
+
+.p-header__menu {
+    display: none;
+
+    @include mq(md) {
+        display: block;
+    }
+}
+
+.p-header__hamburger {
+    display: block;
+    cursor: pointer;
+    height: fit-content;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.p-header__hamburger span {
+    display: block;
+    width: rem(40);
+    height: 3px;
+    background-color: $logo_green;
+    transition: .3s !important;
+    border-radius: 100vh;
+}
+
+.p-header__hamburger span:nth-child(n+2) {
+    margin-top: rem(10);
+}
+
+.p-header__hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 9px);
+}
+
+.p-header__hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.p-header__hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(10px, -9px);
 }
