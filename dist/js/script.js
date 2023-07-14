@@ -49,10 +49,27 @@ jQuery(function ($) {
   $(document).ready(handleScroll);
 
   // ハンバーガーメニュー開閉
+  let resizeTimer;
+
   $('.js-hamburger').on('click', function () {
     $(this).toggleClass('open');
+    $(".p-header__menu").toggleClass('open');
+    if ($('body').css('overflow') === 'hidden') {
+      $('body').css('overflow', 'auto');
+    } else {
+      $('body').css('overflow', 'hidden');
+    }
   });
 
-
+  $(window).on('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function () {
+      if ($(window).width() >= 768) {
+        $('body').css('overflow', 'auto');
+      } else if ($('.js-hamburger').hasClass('open')) {
+        $('body').css('overflow', 'hidden');
+      }
+    }, 100);
+  });
 
 });

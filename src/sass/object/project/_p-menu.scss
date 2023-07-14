@@ -1,9 +1,26 @@
 @use 'global' as *;
 
-.p-menu__items {
-    display: flex;
-    align-items: center;
+.p-menu__inner {
+    display: block;
+    width: 100%;
     height: 100%;
+    overflow-y: auto;
+
+    @include mq(md) {
+        display: contents;
+    }
+}
+
+.p-menu__items {
+    margin: rem(100) auto rem(50);
+    max-width: fit-content;
+
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: initial;
+    }
 }
 
 .p-menu__item {
@@ -12,13 +29,29 @@
     line-height: calc(25/15);
     height: 100%;
     letter-spacing: .0375em;
+    margin-bottom: 20px;
+
+    @include mq(md) {
+        margin-bottom: 0;
+    }
 }
 
 .p-menu__item-core {
     display: flex;
-    align-items: center;
-    height: 100%;
-    padding: rem(15) rem(16);
+    justify-content: center;
+    transition: .3s !important;
+
+    @include mq(md) {
+        align-items: center;
+        height: 100%;
+        padding: rem(15) rem(16);
+    }
+}
+
+.p-menu__item-core:hover {
+    @include mq(md) {
+        opacity: 1;
+    }
 }
 
 .p-menu__item span {
@@ -38,10 +71,6 @@
         visibility: hidden;
         transition: .5s !important;
     }
-}
-
-.p-menu__item a:hover {
-    opacity: 1 !important;
 }
 
 .p-menu__item:hover span::after {
@@ -71,19 +100,27 @@
     width: rem(170);
     font-size: rem(16);
     letter-spacing: .53px;
-    margin-left: rem(15);
+
+    @include mq(md) {
+        margin-left: rem(15);
+    }
 }
 
 .p-menu__button::after {
-    position: absolute;
-    content: '';
-    width: rem(6);
-    height: rem(10);
-    top: calc(50% - 1px);
-    transform: translateY(-50%);
-    right: rem(24);
-    background: url(../images/btn-arrow.svg) no-repeat center center/cover;
-    transition: .3s !important;
+    display: none;
+
+    @include mq(md) {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: rem(6);
+        height: rem(10);
+        top: calc(50% - 1px);
+        transform: translateY(-50%);
+        right: rem(24);
+        background: url(../images/btn-arrow.svg) no-repeat center center/cover;
+        transition: .3s !important;
+    }
 }
 
 .p-menu__button:hover::after {

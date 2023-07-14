@@ -17,6 +17,10 @@
     background-color: $btn_pink;
     max-width: rem(170);
     min-height: rem(55);
-    padding: rem(16) rem(36) rem(16) rem(23);
     letter-spacing: .04em;
+    padding: rem(16);
+
+    @include mq(md) {
+        padding: rem(16) rem(36) rem(16) rem(23);
+    }
 }
