@@ -5,13 +5,20 @@
 }
 
 .p-service__inner {
-    padding-top: rem(212);
-    padding-bottom: rem(172);
+    padding: rem(60) rem(20);
+
+    @include mq(md) {
+        padding: rem(212) rem(25) rem(172);
+    }
 }
 
 .p-service__title {
     width: fit-content;
     max-width: 300px;
     text-align: center;
-    margin: 0 auto rem(60);
+    margin: 0 auto rem(40);
+
+    @include mq(md) {
+        margin: 0 auto rem(60);
+    }
 }

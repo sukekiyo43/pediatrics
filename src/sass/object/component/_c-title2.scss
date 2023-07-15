@@ -1,28 +1,43 @@
 @use 'global' as *;
 
 .c-title2 {
+    font-size: rem(22);
     font-weight: 500;
-    font-size: rem(28);
     line-height: calc(41 / 28);
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
 }
 
 .c-title2::before {
+    width: rem(30);
+    height: rem(30);
+    margin-bottom: rem(15);
     content: '';
     display: block;
-    width: rem(36);
-    height: rem(36);
     background-image: url(../images/icon.png);
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: rem(33);
+
+    @include mq(md) {
+        width: rem(36);
+        height: rem(36);
+        margin-bottom: rem(33);
+    }
 }
 
 .c-title2::after {
     content: attr(data-ruby);
     display: block;
     font-weight: 500;
-    font-size: rem(12);
     line-height: calc(12 / 17);
-    margin-top: rem(16);
+    font-size: rem(10);
+    margin-top: rem(8);
+
+    @include mq(md) {
+        margin-top: rem(16);
+        font-size: rem(12);
+    }
 }

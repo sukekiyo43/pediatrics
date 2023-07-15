@@ -2,7 +2,7 @@
 
 .c-btn {
     display: block;
-    font-size: rem(16);
+    font-size: rem(15);
     line-height: calc(23/16);
     color: $white;
     border-radius: rem(50);
@@ -11,6 +11,10 @@
     font-family: $font-main;
     background-color: $logo_green;
     border-radius: rem(50);
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
 }
 
 .c-btn--pink {

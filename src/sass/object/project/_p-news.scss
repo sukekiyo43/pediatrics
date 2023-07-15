@@ -23,7 +23,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
 
     @include mq(md) {
         justify-content: initial;

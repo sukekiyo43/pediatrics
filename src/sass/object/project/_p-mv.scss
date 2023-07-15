@@ -44,8 +44,8 @@
 }
 
 .p-mv__title {
-    font-size: clamp(1.125rem, 0.7663rem + 1.5306vw, 1.5rem);
-    margin-left: clamp(1.25rem, -5.3268rem + 28.0612vw, 8.125rem);
+    font-size: clamp(1.1875rem, 0.769rem + 1.7857vw, 1.625rem);
+    margin-left: clamp(1.25rem, -4.729rem + 25.5102vw, 7.5rem);
     font-weight: 400;
     line-height: calc(51/32);
     letter-spacing: .04em;
@@ -62,7 +62,7 @@
     font-weight: 400;
     line-height: calc(23/16);
     letter-spacing: 0;
-    font-size: clamp(0.6875rem, 0.3886rem + 1.2755vw, 1rem);
+    font-size: clamp(0.625rem, 0.3261rem + 1.2755vw, 0.9375rem);
     margin-top: 3px;
 
     @include mq(md) {
@@ -93,7 +93,7 @@
 }
 
 .p-mv__news {
-    padding: rem(30) rem(20);
+    padding: rem(25) rem(20) rem(32);
     margin: 0 auto;
 
     @include mq(md) {
