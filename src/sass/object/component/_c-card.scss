@@ -36,13 +36,12 @@
 
 .c-card__text {
     font-size: rem(14);
-    margin-bottom: rem(12);
+    margin-bottom: rem(15);
     font-weight: 400;
     line-height: calc(27/15);
 
     @include mq(md) {
         font-size: rem(15);
-        margin-bottom: rem(15);
     }
 }
 

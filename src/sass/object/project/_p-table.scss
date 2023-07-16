@@ -4,15 +4,22 @@
     border-collapse: collapse;
 }
 
-.p-table td {
+.p-table__text,
+.p-table__shape {
     text-align: center;
     vertical-align: middle;
-    height: rem(42);
+    width: rem(35);
+    height: rem(35);
     letter-spacing: .04em;
-    width: rem(40);
-    font-size: rem(16);
+    font-size: rem(14);
     font-weight: 400;
     line-height: calc(23/16);
+
+    @include mq(md) {
+        width: rem(40);
+        height: rem(42);
+        font-size: rem(16);
+    }
 }
 
 .p-table tr+tr {
@@ -42,4 +49,5 @@
     text-align: left;
     height: rem(28);
     padding-left: rem(3);
+    letter-spacing: .04em;
 }
