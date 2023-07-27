@@ -1,0 +1,182 @@
+@use 'global' as *;
+
+.p-form-table {
+    text-align: left;
+    border-collapse: collapse;
+}
+
+.p-form-table__item {
+    display: flex;
+    flex-direction: column;
+    padding: rem(20) 0 rem(10);
+    border-bottom: solid 1px $line_grey;
+
+    @include mq(md) {
+        flex-direction: row;
+        padding: rem(31) 0 rem(30);
+    }
+}
+
+.p-form-table__head {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: rem(10);
+
+    @include mq(md) {
+        width: rem(234);
+        margin-bottom: 0;
+    }
+}
+
+.p-form-table__label {
+    display: inline-block;
+    width: fit-content;
+    font-size: rem(10);
+    font-weight: 400;
+    color: $white;
+    background-color: $form_tag_red;
+    padding: 0 rem(8) 1px;
+    margin-top: 2px;
+    margin-right: rem(8);
+    white-space: nowrap;
+}
+
+.p-form-table__label--grey {
+    background-color: $form_tag_grey;
+}
+
+.p-form-table__title {
+    font-size: rem(14);
+    font-weight: 400;
+
+    @include mq(md) {
+        font-size: rem(16);
+        line-height: calc(24/16);
+    }
+}
+
+.p-form-table__body {
+    width: 100%;
+    height: 100%;
+    height: rem(45);
+
+    @include mq(md) {
+        height: rem(48);
+        max-width: rem(648);
+    }
+}
+
+.p-form-table__input {
+    border: none;
+    background-color: $form_bg_grey;
+    border-radius: rem(8);
+    width: 100%;
+    height: 100%;
+    padding: rem(5) rem(8);
+    outline: none;
+    font-size: rem(14);
+
+    @include mq(md) {
+        font-size: rem(16);
+        padding: rem(8) rem(10);
+
+    }
+}
+
+.p-form-table__radio {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    gap: rem(10);
+    font-size: rem(14);
+
+    @include mq(md) {
+        flex-direction: row;
+        font-size: rem(16);
+        gap: rem(40);
+    }
+}
+
+.p-form-table__radio-question {
+    position: relative;
+    padding-left: rem(25);
+
+    @include mq(md) {
+        padding-left: rem(35);
+    }
+}
+
+.p-form-table__radio-input {
+    display: none;
+}
+
+.p-form-table__radio-span {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6%;
+    width: rem(18);
+    height: rem(18);
+    border: solid 1px $form_tag_grey;
+    background-color: $white;
+    border-radius: 50%;
+    overflow: hidden;
+
+    @include mq(md) {
+        width: rem(23);
+        height: rem(23);
+    }
+}
+
+.p-form-table__radio-input:checked+.p-form-table__radio-span {
+    background-color: $form_tag_grey;
+    box-shadow: inset 0 0 0 3px $white;
+
+    @include mq(md) {
+        box-shadow: inset 0 0 0 rem(4) $white;
+    }
+}
+
+.p-form-table__textbox {
+    display: flex;
+    flex-direction: column;
+    padding: rem(20) 0 rem(30);
+    align-items: flex-start;
+
+    @include mq(md) {
+        flex-direction: row;
+        padding: rem(31) 0 rem(50);
+    }
+}
+
+.p-form-table__textarea {
+    width: 100%;
+    height: rem(180);
+
+    @include mq(md) {
+        height: auto;
+        max-width: rem(648);
+    }
+}
+
+.p-form-table__textarea-core {
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: $form_bg_grey;
+    border-radius: rem(8);
+    resize: none;
+    height: rem(180);
+    padding: rem(5) rem(8);
+
+    @include mq(md) {
+        min-height: rem(240);
+        padding: rem(8) rem(10);
+    }
+}
+
+.p-form-table__input:focus,
+.p-form-table__textarea-core:focus {
+    border: solid 2px $form_tag_grey;
+}

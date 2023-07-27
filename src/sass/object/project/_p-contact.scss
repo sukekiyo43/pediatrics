@@ -1,0 +1,87 @@
+@use 'global' as *;
+
+
+.p-contact__inner {
+    padding: rem(30) rem(20) rem(60);
+    margin: 0 auto;
+
+    @include mq(md) {
+        padding: rem(41) 0 rem(120);
+        max-width: rem(1040);
+    }
+}
+
+.p-contact__title {
+    margin-bottom: rem(25);
+
+    @include mq(md) {
+        margin-bottom: rem(36);
+    }
+}
+
+.p-contact__guidance {
+    margin-bottom: rem(60);
+
+    @include mq(md) {
+        margin-bottom: rem(92);
+    }
+}
+
+.p-contact__guidance-text {
+    text-align: center;
+    line-height: calc(30/16);
+    font-weight: 400;
+    letter-spacing: .02em;
+    margin-bottom: rem(20);
+    font-size: rem(14);
+
+    @include mq(md) {
+        font-size: rem(16);
+        margin-bottom: rem(33);
+    }
+}
+
+.p-contact__guidance-text::before {
+    display: block;
+    content: '';
+    width: 1px;
+    height: rem(60);
+    background-color: $form_tag_grey;
+    margin: 0 auto rem(25);
+
+    @include mq(md) {
+        height: rem(80);
+        margin: 0 auto rem(40);
+    }
+}
+
+.p-contact__guidance-tel {
+    font-size: rem(30);
+    text-align: center;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .03em;
+    background: linear-gradient(transparent 79%, rgba(210, 233, 145, .5) 21%);
+    width: fit-content;
+    margin: 0 auto;
+
+    @include mq(md) {
+        font-size: rem(38);
+        padding-bottom: 1px;
+    }
+}
+
+.p-contact__guidance-tel span {
+    display: inline-block;
+    font-size: rem(16);
+    margin-right: rem(5);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .03em;
+
+    @include mq(md) {
+        font-size: rem(24);
+        margin-left: -1px;
+        margin-right: rem(8);
+    }
+}

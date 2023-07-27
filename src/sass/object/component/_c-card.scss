@@ -46,40 +46,11 @@
 }
 
 .c-card__btn {
-    max-width: rem(180);
-    background-color: $logo_green;
-    text-align: center;
-    border-radius: rem(50);
-    margin: 0 auto;
-    padding: rem(15);
+    display: flex;
+    justify-content: center;
 
     @include mq(md) {
-        position: absolute;
-        max-width: rem(240);
-        padding: rem(24) rem(35);
-        min-width: rem(240);
-        min-height: rem(71);
-        left: 0;
-        right: 0;
-        bottom: rem(-36);
+        display: block;
+        justify-content: initial;
     }
-}
-
-.c-card__btn::after {
-    @include mq(md) {
-        position: absolute;
-        content: "";
-        width: 6px;
-        height: 10px;
-        top: calc(50% - 1px);
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        right: 1.5rem;
-        background: url(../images/btn-arrow.svg) no-repeat center center/cover;
-        transition: .3s !important;
-    }
-}
-
-.c-card__btn:hover::after {
-    right: rem(12);
 }

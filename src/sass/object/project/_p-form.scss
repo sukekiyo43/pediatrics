@@ -1,0 +1,70 @@
+@use 'global' as *;
+
+.p-form {
+    border: solid rem(3) $line_grey;
+    padding: rem(60) clamp(1.25rem, 0.0542rem + 5.102vw, 2.5rem);
+
+    @include mq(md) {
+        border: solid rem(5) $line_grey;
+        padding: rem(76) rem(74) rem(75);
+    }
+}
+
+.p-form__title {
+    margin-bottom: rem(20);
+
+    @include mq(md) {
+        margin-bottom: rem(27);
+    }
+}
+
+.p-form__table {
+    width: 100%;
+}
+
+.p-form__btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    min-height: rem(60);
+
+    @include mq(md) {
+        min-height: rem(71);
+    }
+}
+
+.p-form__message {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    visibility: hidden;
+    text-align: center;
+    font-weight: bold;
+    color: $logo_green;
+    transition: 1s;
+    transition-delay: .5s;
+    font-size: rem(15);
+    white-space: nowrap;
+
+    @include mq(md) {
+        left: calc(50% - rem(20));
+        font-size: rem(20);
+    }
+}
+
+.p-form__message--false {
+    color: $btn_pink;
+}
+
+.p-form__message.sent {
+    visibility: visible;
+}
+
+.p-form__br {
+    display: block;
+
+    @include mq(md) {
+        display: none;
+    }
+}

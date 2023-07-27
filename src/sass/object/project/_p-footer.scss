@@ -1,25 +1,42 @@
 @use 'global' as *;
 
 .p-footer__inner {
-    min-height: rem(218);
-    padding-top: rem(35);
+    padding: rem(60) rem(20);
+
+    @include mq(md) {
+        padding: rem(44) rem(0) rem(40);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .p-footer__guide {
     display: flex;
-    flex-direction: row-reverse;
     justify-content: space-between;
-    margin-bottom: rem(12);
+    max-width: rem(350);
+    margin: 0 auto rem(20);
+
+    @include mq(md) {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: rem(21);
+    }
 }
 
 .p-footer__nmenu {
-    margin-right: rem(-17);
+    @include mq(md) {
+        margin-right: rem(-17.5);
+    }
 }
 
 .p-footer__sns {
     display: flex;
-    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
     padding-top: 1px;
+
+    @include mq(md) {}
 }
 
 .p-footer__icon {
@@ -32,14 +49,24 @@
 }
 
 .p-footer__legal {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+
+    @include mq(md) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .p-footer__terms {
     display: flex;
-    margin-left: rem(-20);
+    flex-direction: row;
+
+    @include mq(md) {
+        margin-left: rem(-20);
+    }
 }
 
 .p-footer__term {

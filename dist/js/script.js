@@ -48,28 +48,64 @@ jQuery(function ($) {
   $(window).on('scroll', handleScroll);
   $(document).ready(handleScroll);
 
+
+
+  // スクロール時、要素をフェードで表示
+  $(function () {
+    $(".js-fadeUp").on("inview", function () {
+      $(this).addClass("is-inview");
+    });
+  });
+
+
+
   // ハンバーガーメニュー開閉
+  $('.js-hamburger').on('click', function () {
+    $('.js-menu').fadeToggle();
+    $(this).toggleClass('open');
+    $('.js-body').toggleClass('open');
+  });
+
   let resizeTimer;
 
-  $('.js-hamburger').on('click', function () {
-    $(this).toggleClass('open');
-    $(".p-header__menu").toggleClass('open');
-    if ($('body').css('overflow') === 'hidden') {
-      $('body').css('overflow', 'auto');
-    } else {
-      $('body').css('overflow', 'hidden');
+  function checkWidth() {
+    if ($(window).outerWidth(true) >= 768) {
+      $('.js-hamburger').removeClass('open');
+      $('.js-menu').removeAttr('style');
+      $('.js-body').removeClass('open');
     }
-  });
+  }
 
   $(window).on('resize', function () {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function () {
-      if ($(window).width() >= 768) {
-        $('body').css('overflow', 'auto');
-      } else if ($('.js-hamburger').hasClass('open')) {
-        $('body').css('overflow', 'hidden');
-      }
-    }, 100);
+    resizeTimer = setTimeout(checkWidth, 100);
   });
 
+  $(window).on('load', checkWidth);
+
+
+  // フォーム送信後、googleフォーム送信後の画面への遷移を防ぎ、サンキューおよびエラーメッセージ表示
+  $(document).ready(function () {
+
+    $('#form').submit(function (event) {
+      var formData = $('#form').serialize();
+      $.ajax({
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSdxuZgL8P2hEThORq81klqd4m4D8TUWG6GVKEYQ5d20Cq9AmA/formResponse",
+        data: formData,
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+          0: function () {
+            $(".js-form-btn").fadeOut();
+            $(".js-end-message").addClass('sent').slideDown();
+          },
+          200: function () {
+            $(".js-false-message").addClass('sent').slideDown();
+          }
+        }
+      });
+      event.preventDefault();
+    });
+
+  });
 });

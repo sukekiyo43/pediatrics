@@ -8,7 +8,7 @@
 .p-feature__inner {
     padding-top: rem(60);
     padding-bottom: rem(60);
-    max-width: rem(590);
+    max-width: rem(540);
 
     @include mq(md) {
         max-width: rem(1330);
@@ -30,12 +30,12 @@
 }
 
 .p-feature__box {
-    position: relative;
     margin-bottom: rem(30);
     border-radius: rem(16);
     overflow: hidden;
 
     @include mq(md) {
+        position: relative;
         padding: rem(64) rem(80) rem(62);
         margin-bottom: rem(80);
         border-radius: 0;
@@ -99,12 +99,13 @@
 }
 
 .p-feature__img {
-    height: 100%;
-    max-width: rem(950);
-    overflow: hidden;
-    min-height: rem(229);
+    height: 57.39%;
+    width: 100%;
 
     @include mq(md) {
+        overflow: hidden;
+        height: 100%;
+        max-width: rem(950);
         border-radius: rem(16);
         position: absolute;
         right: 0;
@@ -121,40 +122,14 @@
 
 .p-feature__img img {
     min-height: rem(229);
+    width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 .p-feature__btn {
-    position: relative;
-    max-width: rem(280);
-    margin: 0 auto;
-    padding: rem(20);
-    background-color: $logo_green;
-    border-radius: rem(50);
+    display: flex;
+    justify-content: center;
 
-    @include mq(md) {
-        max-width: rem(384);
-        padding: rem(24);
-    }
-}
-
-.p-feature__btn::after {
-    display: none;
-
-    @include mq(md) {
-        position: absolute;
-        content: "";
-        width: rem(7);
-        height: rem(13);
-        top: 50%;
-        transform: translateY(-50%);
-        right: rem(28);
-        background: url(../images/btn-arrow.svg) no-repeat center center/cover;
-        transition: .3s !important;
-    }
-}
-
-.p-feature__btn:hover::after {
-    right: rem(16);
+    @include mq(md) {}
 }

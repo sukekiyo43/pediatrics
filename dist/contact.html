@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex,nofollow" />
+  <!-- meta情報 -->
+  <title>cocomate</title>
+  <meta name="description"
+    content="地域に根ざした小児医療を提供するクリニックです。一般小児科から専門外来まで、子どもたちの健やかな成長をサポートします。経験豊富な医師とスタッフが、親切丁寧に診療いたします。" />
+  <meta name="keywords" content="" />
+  <!-- ogp -->
+  <meta property="og:title" content="" />
+  <meta property="og:type" content="" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="" />
+  <meta property="og:description" content="" />
+  <!-- GoogleFonts Zen Maru Gothic-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+  <!-- ファビコン -->
+  <link rel="icon" href="../images/title-icon.svg" />
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="./js/jquery.inview.min.js"></script>
+  <script defer src="./js/script.js"></script>
+</head>
+
+<body class="js-body">
+  <header class="p-header l-header js-header">
+    <div class="p-header__inner l-inner">
+      <h1 class="p-header__logo c-logo">
+        <a href="index.html">
+          <img src="./images/logo.svg" alt="ヘッダーロゴ">
+        </a>
+      </h1>
+      <nav class="p-header__menu p-menu js-menu">
+        <div class="p-menu__inner">
+          <ul class="p-menu__items">
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>診療時間・アクセス</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>診療案内</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>スタッフ紹介</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>クリニック紹介</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href="contact.html"><span>お問い合わせ</span></a></li>
+            <li class="p-menu__button">
+              <a class="c-btn1" href="">診察予約</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <button class="p-header__hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="l-main">
+    <section class="p-contact l-contact">
+      <div class="p-contact__inner">
+        <div class="p-contact__title">
+          <h2 class="c-title2" data-ruby="Contact">お問い合わせ</h2>
+        </div>
+        <div class="p-contact__guidance">
+          <p class="p-contact__guidance-text">
+            育児に関することやお悩み・不安など、どうぞお気軽にご相談ください。<br>
+            一人でも多くのお子さまが笑顔で過ごせるように<br>
+            cocomateクリニックのスタッフがサポートします。
+          </p>
+          <p class="p-contact__guidance-tel"><span>Tel.</span>03-4579-9011</p>
+        </div>
+        <div class="p-contact__form p-form">
+          <div class="p-form__title">
+            <h2 class="c-title2 c-title2--headless" data-ruby="Contact Form">お問い合わせフォーム</h2>
+          </div>
+          <form class="p-form__body" id="form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdxuZgL8P2hEThORq81klqd4m4D8TUWG6GVKEYQ5d20Cq9AmA/formResponse">
+            <table class="p-form__table p-form-table">
+              <tr class="p-form-table__item">
+                <th class="p-form-table__head">
+                  <span class="p-form-table__label">必須</span><span class="p-form-table__title">お名前</span>
+                </th>
+                <td class="p-form-table__body">
+                  <input class="p-form-table__input" type="text" id="name" name="entry.2005620554">
+                </td>
+              </tr>
+              <tr class="p-form-table__item">
+                <th class="p-form-table__head">
+                  <span class="p-form-table__label">必須</span><span class="p-form-table__title">メールアドレス</span>
+                </th>
+                <td class="p-form-table__body">
+                  <input class="p-form-table__input" type="text" id="mail1" name="entry.1045781291">
+                </td>
+              </tr>
+              <tr class="p-form-table__item">
+                <th class="p-form-table__head">
+                  <span class="p-form-table__label p-form-table__label--grey">任意</span><span
+                    class="p-form-table__title">電話番号</span>
+                </th>
+                <td class="p-form-table__body">
+                  <input class="p-form-table__input" type="text" id="tel" name="entry.1166974658">
+                </td>
+              </tr>
+              <tr class="p-form-table__item">
+                <th class="p-form-table__head">
+                  <span class="p-form-table__label p-form-table__label--grey">任意</span><span
+                    class="p-form-table__title">住所</span>
+                </th>
+                <td class="p-form-table__body">
+                  <input class="p-form-table__input" type="text" id="address" name="entry.1065046570">
+                </td>
+              </tr>
+              <tr class="p-form-table__item">
+                <th class="p-form-table__head">
+                  <span class="p-form-table__label">必須</span>
+                  <span class="p-form-table__title">ご要件</span>
+                </th>
+                <td class="p-form-table__radio">
+                  <label class="p-form-table__radio-question" for="question1">
+                    <input class="p-form-table__radio-input" id="question1" name="entry.1596456857" type="radio"
+                      value="question1">
+                    <span class="p-form-table__radio-span"></span>診察内容について
+                  </label>
+                  <label class="p-form-table__radio-question" for="question2">
+                    <input class="p-form-table__radio-input" id="question2" name="entry.1596456857" type="radio"
+                      value="question2">
+                    <span class="p-form-table__radio-span"></span>育児に関するご相談
+                  </label>
+                  <label class="p-form-table__radio-question" for="question3">
+                    <input class="p-form-table__radio-input" id="question3" name="entry.1596456857" type="radio"
+                      value="question3">
+                    <span class="p-form-table__radio-span"></span>その他
+                  </label>
+                </td>
+              </tr>
+              <tr class="p-form-table__textbox">
+                <th class="p-form-table__head">
+                  <span class="p-form-table__label">必須</span>
+                  <span class="p-form-table__title">お問い合わせ内容</span>
+                </th>
+                <td class="p-form-table__textarea">
+                  <textarea class="p-form-table__textarea-core" id="inquiry" name="entry.839337160" rows=""
+                    cols=""></textarea>
+                </td>
+              </tr>
+            </table>
+            <div class="p-form__btn">
+              <button class="c-btn5 js-form-btn" type="submit" value="Submit">送信する</button>
+              <p class="p-form__message js-end-message">お問い合わせ<br class="p-form__br">ありがとうございました</p>
+              <p class="p-form__message p-form__message--false js-false-message ">送信失敗です</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-info">
+      <div class="l-info">
+        <div class="p-info__head">
+          <div class="p-info__head-inner">
+            <div class="p-info__logo">
+              <img src="./images/logo.svg" alt="infoのロゴ画像">
+            </div>
+            <p class="p-info__tel">
+              <span>Tel.</span>03-4579-9011
+            </p>
+            <p class="p-info__address">
+              〒151-0000 <br class="p-info__address-explanation">東京都新宿区代々木1-1-1 SHIBUYAビル3F
+            </p>
+          </div>
+          <div class="p-info__hours">
+            <table class="p-table p-info__table">
+              <tbody class="p-table__body">
+                <tr>
+                  <td class="p-table__text" colspan="2">受付時間</td>
+                  <td class="p-table__text">月</td>
+                  <td class="p-table__text">火</td>
+                  <td class="p-table__text">水</td>
+                  <td class="p-table__text">木</td>
+                  <td class="p-table__text">金</td>
+                  <td class="p-table__text">土</td>
+                  <td class="p-table__text">日/祝</td>
+                </tr>
+                <tr>
+                  <td class="p-table__text" colspan="2">09:00~13:00</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                </tr>
+                <tr>
+                  <td class="p-table__text" colspan="2">15:00~18:00</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                </tr>
+                <tr>
+                  <td class="p-table__reception-time" colspan="8">
+                    午前最終受付：12:30 午後最終受付：17:30
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="p-info__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12964.464313134007!2d139.6853711!3d35.6741437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ccbdae96a6b%3A0xcddcf2def16786fa!2z44CSMTUxLTAwNTMg5p2x5Lqs6YO95riL6LC35Yy65Luj44CF5pyo!5e0!3m2!1sja!2sjp!4v1688658323311!5m2!1sja!2sjp"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="p-info__contact-box">
+          <a class="c-btn4" href="contact.html">
+            <h2 class="c-title" data-ruby="Contact">
+              お問い合わせ</h2>
+          </a>
+          <a class="c-btn4 c-btn4--pink" href="">
+            <h2 class="c-title" data-ruby="Reserve">診察予約</h2>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="p-footer l-footer">
+    <div class="p-footer__inner">
+      <div class="p-footer__guide">
+        <div class="p-footer__sns">
+          <a href="" class="p-footer__icon">
+            <img src="./images/Instagram.svg" alt="Instagramアイコン">
+          </a>
+          <a href="" class="p-footer__icon">
+            <img src="./images/twitter.svg" alt="Twitterアイコン">
+          </a>
+          <a href="" class="p-footer__icon">
+            <img src="./images/facebook.svg" alt="Facebookアイコン">
+          </a>
+        </div>
+        <nav class="p-footer__nmenu p-menu">
+          <ul class="p-menu__items p-menu__items--footer">
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>診療時間・アクセス</span></a></li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>診療案内</span></a>
+            </li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>スタッフ紹介</span></a>
+            </li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>クリニック紹介</span></a>
+            </li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href="contact.html"><span>お問い合わせ</span></a>
+            </li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>診察予約</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="p-footer__legal">
+        <div class="p-footer__terms">
+          <a class="p-footer__term" href="">利用規約</a>
+          <a class="p-footer__privacy-policy" href="">プライバシーポリシー</a>
+        </div>
+        <small class="p-footer__copyright">Copyright(c) cocomate All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

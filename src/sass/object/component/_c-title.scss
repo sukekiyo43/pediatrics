@@ -1,7 +1,7 @@
 @use 'global' as *;
 
 .c-title {
-    font-size: 22px;
+    font-size: rem(22);
     font-weight: 500;
     line-height: calc(40/28);
 

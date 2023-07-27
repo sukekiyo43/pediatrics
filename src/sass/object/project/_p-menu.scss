@@ -23,28 +23,58 @@
     }
 }
 
+.p-menu__items--footer {
+    margin: 0;
+    margin-left: rem(20);
+
+    @include mq(md) {
+        margin-left: 0;
+    }
+}
+
 .p-menu__item {
     font-weight: 400;
     font-size: rem(15);
     line-height: calc(25/15);
     height: 100%;
-    letter-spacing: .0375em;
-    margin-bottom: 20px;
+    letter-spacing: .04em;
+    margin-bottom: rem(20);
 
     @include mq(md) {
         margin-bottom: 0;
     }
 }
 
+.p-menu__item--footer {
+    font-size: rem(14);
+    margin-bottom: rem(10);
+
+    @include mq(md) {
+        font-size: rem(15);
+        margin-bottom: 0;
+    }
+}
+
+.p-menu__item--footer:last-child {
+    margin-bottom: 0;
+}
+
 .p-menu__item-core {
     display: flex;
     justify-content: center;
-    transition: .3s !important;
 
     @include mq(md) {
         align-items: center;
         height: 100%;
         padding: rem(15) rem(16);
+    }
+}
+
+.p-menu__item-core--footer {
+    justify-content: start;
+
+    @include mq(md) {
+        justify-content: initial;
     }
 }
 
@@ -69,13 +99,13 @@
         background-color: #8ECFC4;
         opacity: 0;
         visibility: hidden;
-        transition: .5s !important;
+        transition: .5s;
     }
 }
 
 .p-menu__item:hover span::after {
     opacity: 0;
-    animation: border .8s ease-out forwards !important;
+    animation: border .8s ease-out forwards;
 }
 
 .p-menu__item:hover span::after {
@@ -96,33 +126,8 @@
 }
 
 .p-menu__button {
-    position: relative;
-    width: rem(170);
-    font-size: rem(16);
-    letter-spacing: .53px;
 
     @include mq(md) {
-        margin-left: rem(15);
+        margin-left: rem(14.5);
     }
-}
-
-.p-menu__button::after {
-    display: none;
-
-    @include mq(md) {
-        display: inline-block;
-        position: absolute;
-        content: '';
-        width: rem(6);
-        height: rem(10);
-        top: calc(50% - 1px);
-        transform: translateY(-50%);
-        right: rem(24);
-        background: url(../images/btn-arrow.svg) no-repeat center center/cover;
-        transition: .3s !important;
-    }
-}
-
-.p-menu__button:hover::after {
-    right: rem(12);
 }
