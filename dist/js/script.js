@@ -87,10 +87,10 @@ jQuery(function ($) {
   // フォーム送信後、googleフォーム送信後の画面への遷移を防ぎ、サンキューおよびエラーメッセージ表示
   $(document).ready(function () {
 
-    $('#form').submit(function (event) {
-      var formData = $('#form').serialize();
+    $('#mG61Hd').submit(function (event) {
+      var formData = $('#mG61Hd').serialize();
       $.ajax({
-        url: "https://docs.google.com/forms/d/e/1FAIpQLSdxuZgL8P2hEThORq81klqd4m4D8TUWG6GVKEYQ5d20Cq9AmA/formResponse",
+        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSeuo1OoAp_MITd8yJp-fL1cek_akxbj2gnx-o5TmZYRLlT1LA/formResponse",
         data: formData,
         type: "POST",
         dataType: "xml",
