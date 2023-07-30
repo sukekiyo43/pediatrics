@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-parients {
+    @include mq(md) {
+        margin: 0 auto;
+        max-width: rem(1440);
+    }
+}

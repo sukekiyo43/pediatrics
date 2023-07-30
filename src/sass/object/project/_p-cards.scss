@@ -1,0 +1,26 @@
+@use 'global' as *;
+
+.p-cards {}
+
+.p-cards__inner {
+    max-width: rem(500);
+    margin: 0 auto;
+    display: grid;
+    gap: rem(30) 0;
+
+    @include mq(md) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: rem(116) rem(40);
+        max-width: initial;
+    }
+}
+
+.p-cards__item {
+    max-width: 100%;
+
+    @include mq(md) {
+        max-width: rem(400);
+        min-height: rem(500);
+    }
+}

@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
+  <meta name="robots" content="noindex,nofollow" />
   <!-- meta情報 -->
   <title>cocomate</title>
   <meta name="description"
@@ -22,38 +23,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
   <!-- ファビコン -->
-  <link rel="icon" href="../images/icon.png" />
+  <link rel="icon" href="../images/title-icon.svg" />
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="./js/jquery.inview.min.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
-<body>
-  <header class="p-header l-header">
+<body class="js-body">
+  <header class="p-header l-header js-header">
     <div class="p-header__inner l-inner">
-      <h1 class="p-header__logo">
-        <a href="">
-          <img src="../images/logo.png" alt="ヘッダーロゴ">
+      <h1 class="p-header__logo c-logo">
+        <a href="index.html">
+          <img src="./images/logo.svg" alt="ヘッダーロゴ">
         </a>
       </h1>
-      <nav class="p-header__nav p-header-menu">
-        <ul class="p-header-menu__items">
-          <li class="p-header-menu__item"><a href="">診療時間・アクセス</a></li>
-          <li class="p-header-menu__item"><a href="">診療案内</a></li>
-          <li class="p-header-menu__item"><a href="">スタッフ紹介</a></li>
-          <li class="p-header-menu__item"><a href="">クリニック紹介</a></li>
-          <li class="p-header-menu__item"><a href="">お問い合わせ</a></li>
-          <li class="p-header-menu__button">
-            <a class="c-btn c-btn--pink" href="">診察予約</a>
-          </li>
-        </ul>
+      <nav class="p-header__menu p-menu js-menu">
+        <div class="p-menu__inner">
+          <ul class="p-menu__items">
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>診療時間・アクセス</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>診療案内</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>スタッフ紹介</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href=""><span>クリニック紹介</span></a></li>
+            <li class="p-menu__item"><a class="p-menu__item-core" href="contact.html"><span>お問い合わせ</span></a></li>
+            <li class="p-menu__button">
+              <a class="c-btn1" href="">診察予約</a>
+            </li>
+          </ul>
+        </div>
       </nav>
+      <button class="p-header__hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
-  <main>
+  <main class="l-main">
     <section class="p-mv l-mv">
       <div class="p-mv__inner">
         <div class="p-mv__body">
@@ -64,39 +73,332 @@
               小児クリニック
             </p>
           </div>
-          <div class="p-mv__copyright">
-            <div class="p-mv__copyright-img"></div>
+          <div class="p-mv__copyright-box">
+            <small class="p-mv__copyright">&copy; cocomate All Rights Reserved.</small>
           </div>
         </div>
-
-        <div class="p-mv__news p-news">
-          <h2 class="c-section-title" data-ruby="news">お知らせ</h2>
-          <ul class="p-news__items">
-            <li class="p-news__item">
-              <a href="">
-                <time class="p-news__date" datetime="2023-05-20">2023.05.20</time>
-                <p class="p-news__text">発熱外来受診時のお願い</p>
-              </a>
-            </li>
-            <li class="p-news__item">
-              <a href="">
-                <time class="p-news__date" datetime="2023-05-13">2023.05.13</time>
-                <p class="p-news__text">5/31(水) 午後臨時休診のお知らせ</p>
-              </a>
-            </li>
-          </ul>
+        <div class="p-mv__news p-news js-fadeUp">
+          <div class="p-mv__news-inner">
+            <h2 class="c-title p-news__title" data-ruby="news">お知らせ</h2>
+            <ul class="p-news__items">
+              <li class="p-news__item">
+                <a href="">
+                  <time class="p-news__date" datetime="2023-05-20">2023.05.20</time>
+                  <p class="p-news__text">発熱外来受診時のお願い</p>
+                </a>
+              </li>
+              <li class="p-news__item">
+                <a href="">
+                  <time class="p-news__date" datetime="2023-05-13">2023.05.13</time>
+                  <p class="p-news__text">5/31(水) 午後臨時休診のお知らせ</p>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="p-service">
-      <h2 class="c-section-title-second" data-ruby="Our Services">
-        診療のご案内
-      </h2>
-      <div class="p-cards"></div>
+      <div class="p-service__inner l-inner">
+        <div class="p-service__title">
+          <h2 class="c-title2 js-fadeUp" data-ruby="Our Services">診療のご案内</h2>
+        </div>
+        <div class="p-cards">
+          <div class="p-cards__inner">
+            <div class="p-cards__item c-card js-fadeUp">
+              <div class="c-card__inner">
+                <h3 class="c-card__title">
+                  一般小児科
+                </h3>
+                <div class="c-card__img">
+                  <img src="./images/service1.jpg" alt="一般小児科">
+                </div>
+                <p class="c-card__text">
+                  咳、鼻水、発熱などのかぜ症状、アレルギー症状など、お子さまの様々な症状に対する小児科全般の診断、治療を行います。お気軽にご相談ください。
+                </p>
+                <div class="c-card__btn">
+                  <a class="c-btn2" href="">
+                    詳しく見る
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__item c-card js-fadeUp">
+              <div class="c-card__inner">
+                <h3 class="c-card__title">
+                  予防接種
+                </h3>
+                <div class="c-card__img">
+                  <img src="./images/service2.jpg" alt="予防接種">
+                </div>
+                <p class="c-card__text">
+                  感染症の予防に有効と確認されたワクチンを接種することは、病気に対する抵抗力（免疫）を高める上で非常に有効な方法です。
+                </p>
+                <div class="c-card__btn">
+                  <a class="c-btn2" href="">
+                    詳しく見る
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__item c-card js-fadeUp">
+              <div class="c-card__inner">
+                <h3 class="c-card__title">
+                  乳幼児検診
+                </h3>
+                <div class="c-card__img">
+                  <img src="./images/service3.jpg" alt="乳幼児検診">
+                </div>
+                <p class="c-card__text">
+                  赤ちゃんの成長・発達、栄養状態、先天性疾患を含む病気の有無などの確認を行い、何らかの問題が見つかった場合は、すぐに適切な対応を行います。
+                </p>
+                <div class="c-card__btn">
+                  <a class="c-btn2" href="">
+                    詳しく見る
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__item c-card js-fadeUp">
+              <div class="c-card__inner">
+                <h3 class="c-card__title">
+                  アレルギー科
+                </h3>
+                <div class="c-card__img">
+                  <img src="./images/service4.jpg" alt="アレルギー科">
+                </div>
+                <p class="c-card__text">
+                  当クリニックでは、気管支喘息、食物アレルギー、アトピー性皮膚炎、アレルギー性鼻炎など、お子様のアレルギー疾患の診療を行います。
+                </p>
+                <div class="c-card__btn">
+                  <a class="c-btn2" href="">
+                    詳しく見る
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__item c-card js-fadeUp">
+              <div class="c-card__inner">
+                <h3 class="c-card__title">
+                  皮膚科
+                </h3>
+                <div class="c-card__img">
+                  <img src="./images/service5.jpg" alt="皮膚科">
+                </div>
+                <p class="c-card__text">
+                  小児期の皮膚疾患について、お子様一人ひとりの症状を適切に見極め、丁寧な治療を心がけております。必要となるスキンケアの方法などもアドバイスしております。
+                </p>
+                <div class="c-card__btn">
+                  <a class="c-btn2" href="">
+                    詳しく見る
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-cards__item c-card js-fadeUp">
+              <div class="c-card__inner">
+                <h3 class="c-card__title">
+                  腎臓科
+                </h3>
+                <div class="c-card__img">
+                  <img src="./images/service6.jpg" alt="腎臓科">
+                </div>
+                <p class="c-card__text">
+                  小児期によく見られる腎臓疾患の検査や診断、治療などを行う診療科です。腎臓専門医の視点から、血液検査や尿検査、超音波検査などを必要に応じて行います。
+                </p>
+                <div class="c-card__btn">
+                  <a class="c-btn2" href="">
+                    詳しく見る
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-parients l-parients">
+      <div class="p-parients__bg">
+        <div class="p-parients__inner">
+          <div class="p-parients__title">
+            <h2 class="c-title js-fadeUp" data-ruby="For Parients">ご来院される方へ</h2>
+            <div class="p-parients__staff-wrap js-fadeUp">
+              <a class="p-parients__staff" href="#">スタッフ紹介を見る</a>
+            </div>
+          </div>
+          <p class="p-parients__text js-fadeUp">
+            地域に暮らす子どもたちが元気に健やかな笑顔で過ごせるよう、<br
+              class="p-parients__indention">私たちは今日も子どもたちの病気や怪我に向き合っています。<br>一人ひとりの心に寄り添いながら、不安な気持ちを和らげ、<br
+              class="p-parients__indention">お子さまとご家族が「来てよかった」と笑顔で安心して帰っていただけるような<br
+              class="p-parients__indention">最高のクリニックを目指します。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-feature">
+      <div class="l-inner p-feature__inner">
+        <div class="p-feature__title">
+          <h2 class="c-title2 js-fadeUp" data-ruby="Feature">
+            当クリニックの特徴
+          </h2>
+        </div>
+        <div class="p-feature__box js-fadeUp">
+          <div class="p-feature__text">
+            <h4 class="p-feature__text-title">
+              <span>日本小児科学会</span><br>
+              <span>小児科専門医による安心の診療</span>
+            </h4>
+            <p class="p-feature__explanation">
+              小児一般、小児救急、小児腎臓外来、小児集中治療などの経験をもとに、お子様の健康面・子育ての相談や体調不良の診療を行います。
+            </p>
+          </div>
+          <div class="p-feature__img">
+            <img src="./images/feature-top.jpg" alt="当クリニック赤ちゃんの画像">
+          </div>
+        </div>
+        <div class="p-feature__box js-fadeUp">
+          <div class="p-feature__text p-feature__text--right">
+            <h4 class="p-feature__text-title">
+              <span>予約システムや調剤薬局との連携で</span><br>
+              <span>待ち時間短縮</span>
+            </h4>
+            <p class="p-feature__explanation">
+              予防接種や検診以外に一般診療も時間帯予約システムを導入しています。また当クリニックの隣に調剤薬局がございます。
+            </p>
+          </div>
+          <div class="p-feature__img p-feature__img--left">
+            <img src="./images/feature-bottom.jpg" alt="当クリニックの特徴院内">
+          </div>
+        </div>
+        <div class="p-feature__btn js-fadeUp">
+          <a class="c-btn3" href="">クリニックについて詳しく見る</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-info">
+      <div class="l-info">
+        <div class="p-info__head">
+          <div class="p-info__head-inner">
+            <div class="p-info__logo">
+              <img src="./images/logo.svg" alt="infoのロゴ画像">
+            </div>
+            <p class="p-info__tel">
+              <span>Tel.</span>03-4579-9011
+            </p>
+            <p class="p-info__address">
+              〒151-0000 <br class="p-info__address-explanation">東京都新宿区代々木1-1-1 SHIBUYAビル3F
+            </p>
+          </div>
+          <div class="p-info__hours">
+            <table class="p-table p-info__table">
+              <tbody class="p-table__body">
+                <tr>
+                  <td class="p-table__text" colspan="2">受付時間</td>
+                  <td class="p-table__text">月</td>
+                  <td class="p-table__text">火</td>
+                  <td class="p-table__text">水</td>
+                  <td class="p-table__text">木</td>
+                  <td class="p-table__text">金</td>
+                  <td class="p-table__text">土</td>
+                  <td class="p-table__text">日/祝</td>
+                </tr>
+                <tr>
+                  <td class="p-table__text" colspan="2">09:00~13:00</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                </tr>
+                <tr>
+                  <td class="p-table__text" colspan="2">15:00~18:00</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape">●</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                  <td class="p-table__shape p-table__shape--black">-</td>
+                </tr>
+                <tr>
+                  <td class="p-table__reception-time" colspan="8">
+                    午前最終受付：12:30 午後最終受付：17:30
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="p-info__map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12964.464313134007!2d139.6853711!3d35.6741437!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ccbdae96a6b%3A0xcddcf2def16786fa!2z44CSMTUxLTAwNTMg5p2x5Lqs6YO95riL6LC35Yy65Luj44CF5pyo!5e0!3m2!1sja!2sjp!4v1688658323311!5m2!1sja!2sjp"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="p-info__contact-box">
+          <a class="c-btn4" href="contact.html">
+            <h2 class="c-title" data-ruby="Contact">
+              お問い合わせ</h2>
+          </a>
+          <a class="c-btn4 c-btn4--pink" href="">
+            <h2 class="c-title" data-ruby="Reserve">診察予約</h2>
+          </a>
+        </div>
+      </div>
     </section>
   </main>
 
+  <footer class="p-footer l-footer">
+    <div class="p-footer__inner">
+      <div class="p-footer__guide">
+        <div class="p-footer__sns">
+          <a href="" class="p-footer__icon">
+            <img src="./images/Instagram.svg" alt="Instagramアイコン">
+          </a>
+          <a href="" class="p-footer__icon">
+            <img src="./images/twitter.svg" alt="Twitterアイコン">
+          </a>
+          <a href="" class="p-footer__icon">
+            <img src="./images/facebook.svg" alt="Facebookアイコン">
+          </a>
+        </div>
+        <nav class="p-footer__nmenu p-menu">
+          <ul class="p-menu__items p-menu__items--footer">
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>診療時間・アクセス</span></a></li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>診療案内</span></a>
+            </li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>スタッフ紹介</span></a>
+            </li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>クリニック紹介</span></a>
+            </li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href="contact.html"><span>お問い合わせ</span></a>
+            </li>
+            <li class="p-menu__item p-menu__item--footer"><a class="p-menu__item-core p-menu__item-core--footer"
+                href=""><span>診察予約</span></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="p-footer__legal">
+        <div class="p-footer__terms">
+          <a class="p-footer__term" href="">利用規約</a>
+          <a class="p-footer__privacy-policy" href="">プライバシーポリシー</a>
+        </div>
+        <small class="p-footer__copyright">Copyright(c) cocomate All Rights Reserved.</small>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>

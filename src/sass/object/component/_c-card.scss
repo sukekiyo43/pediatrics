@@ -1,0 +1,56 @@
+@use 'global' as *;
+
+.c-card {
+    background-color: $white;
+    border-radius: rem(16);
+}
+
+.c-card__inner {
+    padding: rem(35) rem(20);
+    max-width: rem(400);
+    margin: 0 auto;
+    height: 100%;
+
+    @include mq(md) {
+        position: relative;
+        padding: rem(40);
+    }
+}
+
+.c-card__title {
+    font-size: rem(18);
+    margin-bottom: rem(20);
+    font-weight: 400;
+    line-height: calc(29/20);
+    text-align: center;
+
+    @include mq(md) {
+        font-size: rem(20);
+        margin-bottom: rem(32);
+    }
+}
+
+.c-card__img {
+    margin-bottom: rem(16);
+}
+
+.c-card__text {
+    font-size: rem(14);
+    margin-bottom: rem(15);
+    font-weight: 400;
+    line-height: calc(27/15);
+
+    @include mq(md) {
+        font-size: rem(15);
+    }
+}
+
+.c-card__btn {
+    display: flex;
+    justify-content: center;
+
+    @include mq(md) {
+        display: block;
+        justify-content: initial;
+    }
+}

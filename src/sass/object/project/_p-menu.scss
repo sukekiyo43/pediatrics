@@ -1,0 +1,133 @@
+@use 'global' as *;
+
+.p-menu__inner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+    @include mq(md) {
+        display: contents;
+    }
+}
+
+.p-menu__items {
+    margin: rem(100) auto rem(50);
+    max-width: fit-content;
+
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        margin: initial;
+    }
+}
+
+.p-menu__items--footer {
+    margin: 0;
+    margin-left: rem(20);
+
+    @include mq(md) {
+        margin-left: 0;
+    }
+}
+
+.p-menu__item {
+    font-weight: 400;
+    font-size: rem(15);
+    line-height: calc(25/15);
+    height: 100%;
+    letter-spacing: .04em;
+    margin-bottom: rem(20);
+
+    @include mq(md) {
+        margin-bottom: 0;
+    }
+}
+
+.p-menu__item--footer {
+    font-size: rem(14);
+    margin-bottom: rem(10);
+
+    @include mq(md) {
+        font-size: rem(15);
+        margin-bottom: 0;
+    }
+}
+
+.p-menu__item--footer:last-child {
+    margin-bottom: 0;
+}
+
+.p-menu__item-core {
+    display: flex;
+    justify-content: center;
+
+    @include mq(md) {
+        align-items: center;
+        height: 100%;
+        padding: rem(15) rem(16);
+    }
+}
+
+.p-menu__item-core--footer {
+    justify-content: start;
+
+    @include mq(md) {
+        justify-content: initial;
+    }
+}
+
+.p-menu__item-core:hover {
+    @include mq(md) {
+        opacity: 1;
+    }
+}
+
+.p-menu__item span {
+    position: relative;
+}
+
+.p-menu__item span::after {
+    @include mq(md) {
+        position: absolute;
+        bottom: rem(10);
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #8ECFC4;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+}
+
+.p-menu__item:hover span::after {
+    opacity: 0;
+    animation: border .8s ease-out forwards;
+}
+
+.p-menu__item:hover span::after {
+    bottom: rem(-10);
+    visibility: visible;
+}
+
+@keyframes border {
+    0% {
+        opacity: 0;
+        transform: translateY(rem(15));
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.p-menu__button {
+
+    @include mq(md) {
+        margin-left: rem(14.5);
+    }
+}

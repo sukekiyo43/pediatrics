@@ -1,0 +1,125 @@
+@use 'global' as *;
+
+.p-parients {}
+
+.p-parients__bg {
+    position: relative;
+    background-color: rgb(255, 255, 255, .2);
+}
+
+.p-parients__bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../images/parients-img.png) no-repeat right bottom;
+    background-size: rem(297) rem(276);
+    z-index: -1;
+
+    @include mq(md) {
+        background-size: rem(424) rem(394);
+    }
+}
+
+.p-parients__inner {
+    display: flex;
+    flex-direction: column;
+    padding: rem(60) rem(20);
+    max-width: rem(546);
+    margin: 0 auto;
+
+    @include mq(md) {
+        padding: rem(121) 0 rem(119);
+        max-width: rem(1040);
+        justify-content: space-between;
+        flex-direction: row;
+        min-height: rem(520);
+    }
+}
+
+.p-parients__title {
+    display: contents;
+
+    @include mq(md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-shrink: 0;
+        max-width: rem(250);
+    }
+}
+
+.p-parients__staff-wrap {
+    order: 2;
+    text-align: end;
+
+    @include mq(md) {
+        order: initial;
+        text-align: left;
+    }
+}
+
+.p-parients__staff {
+    display: inline-block;
+    font-size: rem(12);
+    line-height: calc(23/14);
+    letter-spacing: .04em;
+    margin-top: rem(40);
+    width: fit-content;
+    transition: .3s;
+
+    @include mq(md) {
+        position: relative;
+        margin-top: rem(20);
+        font-size: rem(14);
+        margin-left: 0;
+        width: auto;
+    }
+}
+
+.p-parients__staff::after {
+    display: inline-block;
+    content: '';
+    width: rem(38);
+    height: 1px;
+    background-color: $text;
+    margin-left: rem(16);
+    margin-bottom: rem(6);
+    transition: .3s;
+
+    @include mq(md) {
+        width: rem(48);
+    }
+}
+
+.p-parients__staff:hover::after {
+    @include mq(md) {
+        margin-left: rem(28);
+        opacity: .7;
+    }
+}
+
+.p-parients__text {
+    margin-top: rem(40);
+    font-size: rem(14);
+    font-weight: 400;
+    line-height: calc(45/16);
+    max-width: rem(506);
+    margin: rem(40) auto 0;
+
+    @include mq(md) {
+        max-width: rem(625);
+        font-size: rem(16);
+        margin: -1px 0 0;
+    }
+}
+
+.p-parients__indention {
+    display: none;
+
+    @include mq(md) {
+        display: inline;
+    }
+}
