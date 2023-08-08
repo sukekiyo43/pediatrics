@@ -106,6 +106,32 @@ jQuery(function ($) {
       });
       event.preventDefault();
     });
-
   });
+
+
+  // お問い合わせフォームバリテーション必須項目を埋めるとボタンが送信可能になる
+  const form = $("#mG61Hd");
+  const button = $(".js-form-btn");
+  button.eq(0).prop("disabled", true);
+
+  form.on("input change", update);
+
+  function update() {
+    const isRequired = form[0].checkValidity();
+
+    if (isRequired) {
+      button.eq(0).prop("disabled", false);
+    } else {
+      button.eq(0).prop("disabled", true);
+    }
+  }
+
+
+
+
+
+
+
+
+
 });

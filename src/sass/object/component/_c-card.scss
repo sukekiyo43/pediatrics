@@ -34,6 +34,12 @@
     margin-bottom: rem(16);
 }
 
+.c-card__img img {
+    width: 100%;
+    object-fit: cover;
+    max-height: rem(185);
+}
+
 .c-card__text {
     font-size: rem(14);
     margin-bottom: rem(15);

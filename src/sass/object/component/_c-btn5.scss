@@ -21,3 +21,9 @@
         transform: translateX(rem(-20));
     }
 }
+
+.c-btn5:disabled {
+    background-color: $form_tag_grey;
+    opacity: .5;
+    cursor: initial;
+}

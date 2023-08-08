@@ -28,7 +28,6 @@
   <link rel="stylesheet" href="./css/styles.css">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="./js/jquery.inview.min.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
@@ -86,24 +85,30 @@
             <table class="p-form__table p-form-table">
               <tr class="p-form-table__item">
                 <th class="p-form-table__head">
-                  <span class="p-form-table__label">必須</span><span class="p-form-table__title">お名前</span>
+                  <label class="p-form-table__head-label" for="name">
+                    <span class="p-form-table__label">必須</span><span class="p-form-table__title">お名前</span>
+                  </label>
                 </th>
                 <td class="p-form-table__body">
-                  <input class="p-form-table__input" type="text" id="name" name="entry.1455592121">
+                  <input class="p-form-table__input" type="text" id="name" name="entry.1455592121" required>
                 </td>
               </tr>
               <tr class="p-form-table__item">
                 <th class="p-form-table__head">
-                  <span class="p-form-table__label">必須</span><span class="p-form-table__title">メールアドレス</span>
+                  <label class="p-form-table__head-label" for="mail">
+                    <span class="p-form-table__label ">必須</span><span class="p-form-table__title">メールアドレス</span>
+                  </label>
                 </th>
                 <td class="p-form-table__body">
-                  <input class="p-form-table__input" type="text" id="mail1" name="entry.112541341">
+                  <input class="p-form-table__input" type="text" id="mail" name="entry.112541341" required>
                 </td>
               </tr>
               <tr class="p-form-table__item">
                 <th class="p-form-table__head">
-                  <span class="p-form-table__label p-form-table__label--grey">任意</span><span
-                    class="p-form-table__title">電話番号</span>
+                  <label class="p-form-table__head-label" for="tel">
+                    <span class="p-form-table__label p-form-table__label--grey">任意</span><span
+                      class="p-form-table__title">電話番号</span>
+                  </label>
                 </th>
                 <td class="p-form-table__body">
                   <input class="p-form-table__input" type="text" id="tel" name="entry.344622379">
@@ -111,8 +116,10 @@
               </tr>
               <tr class="p-form-table__item">
                 <th class="p-form-table__head">
-                  <span class="p-form-table__label p-form-table__label--grey">任意</span><span
-                    class="p-form-table__title">住所</span>
+                  <label class="p-form-table__head-label" for="address">
+                    <span class="p-form-table__label p-form-table__label--grey">任意</span><span
+                      class="p-form-table__title">住所</span>
+                  </label>
                 </th>
                 <td class="p-form-table__body">
                   <input class="p-form-table__input" type="text" id="address" name="entry.662846773">
@@ -126,33 +133,37 @@
                 <td class="p-form-table__radio">
                   <label class="p-form-table__radio-question" for="question1">
                     <input class="p-form-table__radio-input" id="question1" name="entry.2110012463" type="radio"
-                      value="診察内容について">
+                      value="診察内容について" required>
                     <span class="p-form-table__radio-span"></span>診察内容について
                   </label>
                   <label class="p-form-table__radio-question" for="question2">
-                    <input class="p-form-table__radio-input" id="question2" name="entry.2110012463" type="radio"
-                      value="育児に関するご相談">
+                    <input class="p-form-table__radio-input " id="question2" name="entry.2110012463" type="radio"
+                      value="育児に関するご相談" required>
                     <span class="p-form-table__radio-span"></span>育児に関するご相談
                   </label>
                   <label class="p-form-table__radio-question" for="question3">
                     <input class="p-form-table__radio-input" id="question3" name="entry.2110012463" type="radio"
-                      value="その他">
+                      value="その他" required>
                     <span class="p-form-table__radio-span"></span>その他
                   </label>
                 </td>
               </tr>
               <tr class="p-form-table__textbox">
                 <th class="p-form-table__head">
-                  <span class="p-form-table__label">必須</span>
-                  <span class="p-form-table__title">お問い合わせ内容</span>
+                  <label class="p-form-table__head-textarea" for="inquiry">
+                    <span class="p-form-table__head-textarea-wrap">
+                      <span class="p-form-table__label">必須</span>
+                      <span class="p-form-table__title">お問い合わせ内容</span>
+                    </span>
+                  </label>
                 </th>
                 <td class="p-form-table__textarea">
-                  <textarea class="p-form-table__textarea-core" id="inquiry" name="entry.272787602"></textarea>
+                  <textarea class="p-form-table__textarea-core" id="inquiry" name="entry.272787602" required></textarea>
                 </td>
               </tr>
             </table>
             <div class="p-form__btn">
-              <button class="c-btn5 js-form-btn" type="submit" value="Submit">送信する</button>
+              <button class="c-btn5 js-form-btn" type="submit" value="Submit" disabled>送信する</button>
               <p class="p-form__message js-end-message">お問い合わせ<br class="p-form__br">ありがとうございました</p>
               <p class="p-form__message p-form__message--false js-false-message ">送信失敗です</p>
             </div>
@@ -281,6 +292,7 @@
       </div>
     </div>
   </footer>
+
 </body>
 
 </html>

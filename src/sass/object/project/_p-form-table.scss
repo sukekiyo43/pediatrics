@@ -10,8 +10,10 @@
     flex-direction: column;
     padding: rem(20) 0 rem(10);
     border-bottom: solid 1px $line_grey;
+    align-items: flex-start;
 
     @include mq(md) {
+        align-items: center;
         flex-direction: row;
         padding: rem(31) 0 rem(30);
     }
@@ -22,10 +24,31 @@
     align-items: center;
     text-align: left;
     margin-bottom: rem(10);
+    width: 100%;
 
     @include mq(md) {
         width: rem(234);
         margin-bottom: 0;
+    }
+}
+
+.p-form-table__head-label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @include mq(md) {
+        height: 100%;
+    }
+}
+
+.p-form-table__head-textarea {
+    display: flex;
+    align-items: start;
+    width: 100%;
+
+    @include mq(md) {
+        height: rem(240);
     }
 }
 
@@ -37,9 +60,12 @@
     color: $white;
     background-color: $form_tag_red;
     padding: 0 rem(8) 1px;
-    margin-top: 2px;
     margin-right: rem(8);
     white-space: nowrap;
+
+    @include mq(md) {
+        margin-top: 2px;
+    }
 }
 
 .p-form-table__label--grey {
@@ -56,6 +82,11 @@
     }
 }
 
+.p-form-table__head-textarea-wrap {
+    display: flex;
+    align-items: center;
+}
+
 .p-form-table__body {
     width: 100%;
     height: 100%;
@@ -68,6 +99,7 @@
 }
 
 .p-form-table__input {
+    position: relative;
     border: none;
     background-color: $form_bg_grey;
     border-radius: rem(8);
